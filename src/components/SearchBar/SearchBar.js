@@ -7,9 +7,9 @@ class SearchBar extends React.Component {
     constructor(props) {
       super(props);
       this.state = {
-        term: 'meat',
-        location: 'new york',
-        sortBy: 'best_match'
+        term: ' ',
+        location: ' ',
+        sortBy: ' '
       };
       this.sortByOptions = {
         'Best Match': 'best_match',
@@ -53,7 +53,6 @@ class SearchBar extends React.Component {
         <div className = "SearchBar" >
           <div className = "SearchBar-sort-options" >
             <ul> {this.renderSortByOptions()} </ul>
-            <p style={{color: 'white', textAlign: 'center'}}> {this.state.term}-----{this.state.location} -----{this.state.sortBy}</p>
           </div >
           <div className = "SearchBar-fields" >
             <input onChange={this.handleTermChange} placeholder="Search Businesses" / >
