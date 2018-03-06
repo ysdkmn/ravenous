@@ -19,6 +19,7 @@ class SearchBar extends React.Component {
       this.handleTermChange = this.handleTermChange.bind(this);
       this.handleLocationChange = this.handleLocationChange.bind(this);
       this.handleSearch = this.handleSearch.bind(this);
+      this.handlePressEnterKey = this.handlePressEnterKey.bind(this);
     }
 
     getSortByClass(sortByOption) {
@@ -42,6 +43,12 @@ class SearchBar extends React.Component {
       console.log(this.state);
     }
 
+    handlePressEnterKey(event) {
+      if (event.key === 'Enter') {
+        this.handleSearch();
+      }
+    }
+
     renderSortByOptions() {
       return Object.keys(this.sortByOptions).map(sortByOption => {
         let sortByOptionValue = this.sortByOptions[sortByOption];
@@ -51,7 +58,7 @@ class SearchBar extends React.Component {
 
     render() {
       return (
-        <div className = "SearchBar" >
+        <div className = "SearchBar" onKeyPress={this.handlePressEnterKey}>
           <div className = "SearchBar-sort-options" >
             <ul> {this.renderSortByOptions()} </ul>
           </div >
