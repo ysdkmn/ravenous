@@ -8,8 +8,8 @@ class SearchBar extends React.Component {
       super(props);
       this.state = {
         term: ' ',
-        location: ' ',
-        sortBy: ' '
+        location: 'New York',
+        sortBy: 'rating'
       };
       this.sortByOptions = {
         'Best Match': 'best_match',
@@ -40,7 +40,6 @@ class SearchBar extends React.Component {
     handleSearch(event) {
       this.props.searchYelp(this.state.term, this.state.location, this.state.sortBy);
       console.log(this.state);
-      console.log(this.props.businesses);
     }
 
     renderSortByOptions() {
