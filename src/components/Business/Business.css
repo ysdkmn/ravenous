@@ -34,6 +34,20 @@
   justify-content: space-between;
 }
 
+.Business-address a {
+  text-decoration: none;
+  color: black;
+}
+
+.Business-address a:hover {
+  color: #CCA353;
+  text-decoration: underline;
+}
+
+.Business-address a:visited {
+  color: #CCA353;
+}
+
 .Business-reviews {
   display: flex;
   flex-direction: column;

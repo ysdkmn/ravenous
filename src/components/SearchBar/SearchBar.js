@@ -27,6 +27,7 @@ class SearchBar extends React.Component {
     }
 
     handleSortByChange(sortByOption) {
+      this.props.searchYelp(this.state.term, this.state.location, sortByOption);
       this.setState({sortBy: sortByOption});
     }
 
