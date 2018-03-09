@@ -18,8 +18,10 @@ const GoogleMaps = {
         let jsonResponse = await response.json();
         if (jsonResponse.status === "OK") {
           return jsonResponse.results[0].place_id;
+        } else if (jsonResponse.status === "OVER_QUERY_LIMIT") {
+          return jsonResponse.status;
         } else {
-          return false
+          return false;
         }
       }
       throw new Error('Request failed!');
@@ -33,6 +35,7 @@ const GoogleMaps = {
       let response = await fetch(`${detailsBaseURL}${placeId}&key=${apiKey}`);
       if (response.ok) {
         let jsonResponse = await response.json()
+        console.log('webpage returned');
         return jsonResponse.result.website;
       }
       throw new Error('Request failed!');
