@@ -3,8 +3,8 @@ import './LoadSpinner.css';
 
 class LoadSpinner extends React.Component {
   render() {
-    return (<div>
-      <h3 className={this.props.loading?"loading":"loaded"}>Loading!</h3>
+    return (<div className={`LoadSpinner ${this.props.loading?"loading":"loaded"}`}>
+      <h3>Loading!</h3>
     </div>);
   }
 }

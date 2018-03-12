@@ -1,0 +1,67 @@
+const fakeList = [
+  {
+    id: 123,
+    imageSrc: 'img',
+    name: 'business',
+    address: 'address',
+    city: 'city',
+    state: 'state',
+    zipCode: 'zip',
+    category: 'category',
+    rating: 123,
+    reviewCount: 123,
+    latitude: 'latitude',
+    longitude: 'longitude',
+    url: 'url',
+    googleMapUrl: `https://www.google.com/maps/search/?api=1&query=business`
+  },
+  {
+    id: 123,
+    imageSrc: 'img',
+    name: 'business',
+    address: 'address',
+    city: 'city',
+    state: 'state',
+    zipCode: 'zip',
+    category: 'category',
+    rating: 123,
+    reviewCount: 123,
+    latitude: 'latitude',
+    longitude: 'longitude',
+    url: 'url',
+    googleMapUrl: `https://www.google.com/maps/search/?api=1&query=business`
+  },
+  {
+    id: 123,
+    imageSrc: 'img',
+    name: 'business',
+    address: 'address',
+    city: 'city',
+    state: 'state',
+    zipCode: 'zip',
+    category: 'category',
+    rating: 123,
+    reviewCount: 123,
+    latitude: 'latitude',
+    longitude: 'longitude',
+    url: 'url',
+    googleMapUrl: `https://www.google.com/maps/search/?api=1&query=business`
+  },
+  {
+    id: 123,
+    imageSrc: 'img',
+    name: 'business',
+    address: 'address',
+    city: 'city',
+    state: 'state',
+    zipCode: 'zip',
+    category: 'category',
+    rating: 123,
+    reviewCount: 123,
+    latitude: 'latitude',
+    longitude: 'longitude',
+    url: 'url',
+    googleMapUrl: `https://www.google.com/maps/search/?api=1&query=business`
+  }];
+
+export default fakeList;
