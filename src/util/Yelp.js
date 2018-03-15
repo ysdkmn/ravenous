@@ -11,7 +11,6 @@ const Yelp = {
       if (response.ok) {
         let jsonResponse = await response.json();
         if (jsonResponse.businesses) {
-          console.log('YelpSearch');
           return jsonResponse.businesses.map(business => {
             return ({
               id: business.id,

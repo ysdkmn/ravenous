@@ -7,7 +7,7 @@ const GoogleMaps = {
   async search(name, latitude, longitude) {
       let id = await this.searchId(name, latitude, longitude);
       if (id) {
-        return this.searchWebPage(id);
+      this.searchWebPage(id);
       }
     },
 
@@ -34,8 +34,7 @@ const GoogleMaps = {
     try {
       let response = await fetch(`${detailsBaseURL}${placeId}&key=${apiKey}`);
       if (response.ok) {
-        let jsonResponse = await response.json()
-        console.log('webpage returned');
+        let jsonResponse = await response.json();
         return jsonResponse.result.website;
       }
       throw new Error('Request failed!');

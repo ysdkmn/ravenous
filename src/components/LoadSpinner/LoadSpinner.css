@@ -24,7 +24,13 @@
     to {transform:rotate(360deg);}
 }
 
+@-webkit-keyframes spin {
+    from {-webkit-transform:rotate(0deg);transform:rotate(0deg);}
+    to {-webkit-transform:rotate(360deg);transform:rotate(360deg);}
+}
+
 .LoadSpinner img {
   height: 10rem;
   animation: spin 5s linear 0s infinite alternate;
+  -webkit-animation: spin 5s linear 0s infinite alternate;
 }

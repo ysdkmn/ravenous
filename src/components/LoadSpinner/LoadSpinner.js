@@ -6,7 +6,7 @@ class LoadSpinner extends React.Component {
 
   render() {
     return (<div className={`LoadSpinner ${this.props.loading?"loading":"loaded"}`}>
-      <img src={pizza} />
+      <img src={pizza} alt="pizza loading spinner" />
     </div>);
   }
 }
