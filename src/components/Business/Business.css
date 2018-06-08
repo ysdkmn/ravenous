@@ -42,9 +42,10 @@
 .Business-address a:hover {
   color: #CCA353;
   text-decoration: underline;
+  cursor: pointer;
 }
 
-.Business-address a:visited {
+.Business-address a: {
   color: #CCA353;
 }
 

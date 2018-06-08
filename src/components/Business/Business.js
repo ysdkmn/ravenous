@@ -2,6 +2,10 @@ import React from 'react';
 import './Business.css';
 
 class Business extends React.Component {
+  handleSearchGoogleMaps(name, latitude, longitude, url) {
+    this.props.searchGoogleMaps(name, latitude, longitude, url);
+  }
+
   render() {
     return (<div className="Business">
       <div className="image-container">
@@ -17,7 +21,7 @@ class Business extends React.Component {
             <p>{this.props.business.city}</p>
             <p>{this.props.business.state} {this.props.business.zipCode}</p>
           </a>
-          <a href={this.props.business.url} target="_blank">
+          <a onClick={this.handleSearchGoogleMaps.bind(this, this.props.business.name, this.props.business.latitude, this.props.business.longitude, this.props.business.url)}>
             <p>Website</p>
           </a>
         </div>
